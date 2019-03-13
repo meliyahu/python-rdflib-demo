@@ -1,0 +1,77 @@
+@prefix : <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix admin: <http://webns.net/mvcb/> .
+@prefix cert: <http://www.w3.org/ns/auth/cert#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix redfoot: <http://redfoot.net/2005/session#> .
+@prefix rsa: <http://www.w3.org/ns/auth/rsa#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://bigasterisk.com/foaf.rdf> a foaf:PersonalProfileDocument ;
+    admin:errorReportsTo <mailto:leigh@ldodds.com> ;
+    admin:generatorAgent <http://www.ldodds.com/foaf/foaf-a-matic> ;
+    foaf:maker <http://bigasterisk.com/foaf.rdf#drewp> ;
+    foaf:primaryTopic <http://bigasterisk.com/foaf.rdf#drewp> .
+
+<http://bblfish.net/people/henry/card#me> a foaf:Person ;
+    rdfs:seeAlso <http://bblfish.net/people/henry/card> ;
+    foaf:name "Henry Story" .
+
+<http://collectivesource.com/foaf.rdf#nathan> a foaf:Person ;
+    rdfs:seeAlso <http://collectivesource.com/foaf.rdf> ;
+    foaf:mbox_sha1sum "25b089f5bc32b48f545daf04a60c4823dc477c80" ;
+    foaf:name "Nathan Wilson" .
+
+<http://fantasyfamegame.com/> a doap:Project ;
+    doap:category <http://rdflib.net/projects#using_rdflib> ;
+    doap:description "(unreleased)" ;
+    doap:homepage <http://fantasyfamegame.com/> ;
+    doap:maintainer <http://bigasterisk.com/foaf.rdf#drewp> ;
+    doap:name "Fantasy Fame Game" .
+
+<https://bigasterisk.com/foaf.rdf#accnt> a foaf:OnlineAccount ;
+    foaf:accountServiceHomePage <https://bigasterisk.com/cert/> .
+
+<http://bigasterisk.com/foaf.rdf#drewp> a foaf:Person ;
+    redfoot:hexdigest "a58baff6ce11790bea51287049899088" ;
+    rdfs:seeAlso <http://identi.ca/drewp/foaf>,
+        <http://revyu.com/people/drewp/about/rdf> ;
+    owl:sameAs <http://identi.ca/user/8563>,
+        <http://revyu.com/people/drewp> ;
+    foaf:based_near [ a :Point ;
+            :lat "37.520478" ;
+            :long "-122.27603" ],
+        <http://sws.geonames.org/5404335/> ;
+    foaf:currentProject <http://fantasyfamegame.com/>,
+        <http://gasuse.bigasterisk.com/> ;
+    foaf:depiction <http://bigasterisk.com/drewheadshot> ;
+    foaf:family_name "Perttula" ;
+    foaf:givenname "Drew" ;
+    foaf:holdsAccount <http://delicious.com/drewpca/>,
+        <http://identi.ca/user/8563>,
+        <https://bigasterisk.com/foaf.rdf#accnt> ;
+    foaf:homepage <http://bigasterisk.com> ;
+    foaf:knows [ a foaf:Person ;
+            foaf:mbox_sha1sum "92fe6a27d1a6d6342da3889b6af429f8f3d229b2" ;
+            foaf:name "Kelsi Perttula" ],
+        [ a foaf:Person ;
+            foaf:mbox_sha1sum "1c9699bb667d9ad9595cbaa0467ce677bf225829" ;
+            foaf:name "David McClosky" ],
+        <http://bblfish.net/people/henry/card#me>,
+        <http://collectivesource.com/foaf.rdf#nathan> ;
+    foaf:mbox_sha1sum "847eea9f89b1efff3c735c0d73b30b8280cfc030" ;
+    foaf:name "Drew Perttula" ;
+    foaf:nick "drewp" ;
+    foaf:schoolHomepage <http://berkeley.edu> ;
+    foaf:title "Mr" ;
+    foaf:workplaceHomepage <http://www.dreamworksanimation.com/> .
+
+[] a rsa:RSAPublicKey ;
+    cert:identity <https://bigasterisk.com/foaf.rdf#accnt> ;
+    rsa:modulus [ cert:hex "d00c13c94adda4636cdf55b66d4c28dde58fe40059458f7b17683c75f5dc111a6e17eb60e42190aeefc904e6f91dbeb0d0084114df3fa4532d5d439a70fce8d8138712dde3e0faa1f9023cf315dbb3e6227b87f87d9552f721c5418cfa8108f710c5dc96978d6c872343132eb359a33a4bba165044c21d6ccafeddcf3b293d50b68f9f8a971a3ecc7b2a3cdad1ab1bfd66ccf89e34453287a2d097a5a98a21b03e9e2f261ab43fe5521d2f2bd606f3a7293fe763efbb37a06563ebe21beea9ea75eb156caa58997072996aa725508ed215e1fe24bba63410728984898d1950b1e63c8108c37aad4ff98c019651592e6e03c85dd5d4e5e1264c35bf3e66a57b03" ] ;
+    rsa:public_exponent [ cert:decimal "65537" ] .
+

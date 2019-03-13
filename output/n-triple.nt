@@ -1,0 +1,5 @@
+_:Nb66ced087d074b3b89b854c159619ce7 <http://xmlns.com/foaf/0.1/mbox> <mailto:mosheh@example.org> .
+_:Nb66ced087d074b3b89b854c159619ce7 <http://xmlns.com/foaf/0.1/name> "Mosheh EliYahu" .
+_:Nb66ced087d074b3b89b854c159619ce7 <http://xmlns.com/foaf/0.1/nick> "mosheh"@he .
+_:Nb66ced087d074b3b89b854c159619ce7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+
